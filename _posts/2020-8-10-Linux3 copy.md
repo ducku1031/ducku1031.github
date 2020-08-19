@@ -1,0 +1,137 @@
+---
+layout: post
+title: "awk Training"
+description: "awk command"
+categories: [Linux]
+tags: [Linux Command, Shell Script, Training]
+redirect_from:
+  - /2020/08/19/
+---
+
+* Kramdown table of contents
+{:toc .toc}
+
+
+<br>
+
+# 실습
+~~~
+$ cat datafile
+northwest       NW      Charles Main            3.0     .98     3       34
+western         WE      Sharon Gray             5.3     .97     5       23
+southwest       SW      Lewis Dalsass           2.7     .8      2       18
+southern        SO      Suan Chin               5.1     .95     4       15
+southeast       SE      Patricia Hemenway       4.0     .7      4       17
+eastern         EA      TB Savage               4.4     .84     5       20
+northeast       NE      AM Main Jr.             5.1     .94     3       13
+north           NO      Margot Weber            4.5     .89     5        9
+central         CT      Ann Stephens            5.7     .94     5       13
+~~~
+
+![a2](https://user-images.githubusercontent.com/69279022/90639702-05352080-e26a-11ea-8956-2945b79e8888.png)
+
+<br>
+
+## "west" 라는 단어가 포함된 Line을 출력
+~~~
+[ec2-user@~]$ awk '/west/' datafile
+northwest       NW      Charles Main            3.0     .98     3       34
+western         WE      Sharon Gray             5.3     .97     5       23
+southwest       SW      Lewis Dalsass           2.7     .8      2       18
+~~~
+
+<br>
+
+## Line의 시작이 north로 시작하는 Line을 출력
+~~~
+[ec2-user@~]$ awk '/^north/' datafile
+northwest       NW      Charles Main            3.0     .98     3       34
+northeast       NE      AM Main Jr.             5.1     .94     3       13
+north           NO      Margot Weber            4.5     .89     5        9
+~~~
+
+<br>
+
+## Line의 시작이 "no" 또는 "so" 로 하는 Line을 출력
+~~~
+[ec2-user@~]$ awk '/^(no|so)/' datafile
+northwest       NW      Charles Main            3.0     .98     3       34
+southwest       SW      Lewis Dalsass           2.7     .8      2       18
+southern        SO      Suan Chin               5.1     .95     4       15
+southeast       SE      Patricia Hemenway       4.0     .7      4       17
+northeast       NE      AM Main Jr.             5.1     .94     3       13
+north           NO      Margot Weber            4.5     .89     5        9
+~~~
+
+<br>
+
+## 세 번째 단락, 두 번째 단락만 출력
+~~~
+[ec2-user@~]$ awk '{print $3, $2}' datafile
+Charles NW
+Sharon WE
+Lewis SW
+Suan SO
+Patricia SE
+TB EA
+AM NE
+Margot NO
+Ann CT
+~~~
+
+## 두 번째 단락, 세 번째 단락만 출력
+~~~
+[ec2-user@~]$ awk '{print $2, $3}' datafile
+NW Charles
+WE Sharon
+SW Lewis
+SO Suan
+SE Patricia
+EA TB
+NE AM
+NO Margot
+CT Ann
+~~~
+
+## 두 번째 레코드와 세 번째 레코드 만 붙여서 출력
+~~~
+[ec2-user@~]$ awk '{print $2 $3}' datafile
+NWCharles
+WESharon
+SWLewis
+SOSuan
+SEPatricia
+EATB
+NEAM
+NOMargot
+CTAnn
+~~~
+
+## 모든 레코드 출력
+~~~
+[ec2-user@~]$ awk '{print $0}' datafile
+northwest       NW      Charles Main            3.0     .98     3       34
+western         WE      Sharon Gray             5.3     .97     5       23
+southwest       SW      Lewis Dalsass           2.7     .8      2       18
+southern        SO      Suan Chin               5.1     .95     4       15
+southeast       SE      Patricia Hemenway       4.0     .7      4       17
+eastern         EA      TB Savage               4.4     .84     5       20
+northeast       NE      AM Main Jr.             5.1     .94     3       13
+north           NO      Margot Weber            4.5     .89     5        9
+central         CT      Ann Stephens            5.7     .94     5       13
+~~~
+
+## 필드의 수를 모두 출력
+~~~
+[ec2-user@~]$ awk '{print "필드 수: " NF}' datafile
+필드 수: 8
+필드 수: 8
+필드 수: 8
+필드 수: 8
+필드 수: 8
+필드 수: 8
+필드 수: 9
+필드 수: 8
+필드 수: 8
+~~~
+▶ 필드의 수는 **Tab** 과 **Space** 로 구분된다.
