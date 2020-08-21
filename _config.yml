@@ -30,7 +30,7 @@ author:
   name:
   job_title:
   location:
-  email:
+  email: kbd031@gmail.com
   social_links:
     - name: facebook
       url:
@@ -49,7 +49,7 @@ author:
 home:
   section1: <h1>Ducku Book</h1>
   section2: <h2>오직 제가 보기 편하기 위하여 작성하였습니다</h2>
-  section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/yizeng/jekyll-theme-simple-texture" title="View on GitHub"></a></div>
+  section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/ducku1031" title="View on GitHub"></a></div>
 blog:
   cc_license: http://creativecommons.org/licenses/by-sa/4.0/ # A link to CC License of your choice.
   cc_license_image: /assets/images/theme/cc-by-sa.png # An image of your CC License. 
