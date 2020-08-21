@@ -23,8 +23,8 @@ sass:
 # Site Data
 url: "https://ducku1031.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: ducku book
-description: "오직 제가 보기 편하기 위하여 작성하였습니다."
+title: Ducku Book
+description: "Welcome."
 keywords: 'jekyll,theme,gem-based,blog'
 author:
   name:
@@ -48,7 +48,7 @@ author:
       url:
 home:
   section1: <h1>Ducku Book</h1>
-  section2: <h2>Welcome</h2>
+  section2: <h2>오직 제가 보기 편하기 위하여 작성하였습니다</h2>
   section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/yizeng/jekyll-theme-simple-texture" title="View on GitHub"></a></div>
 blog:
   cc_license: http://creativecommons.org/licenses/by-sa/4.0/ # A link to CC License of your choice.
