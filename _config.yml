@@ -3,6 +3,7 @@ encoding: UTF-8
 exclude: ["*.gem", "*.gemspec", "Gemfile", "Gemfile.lock", "node_modules", "Rakefile", "starter-kit", "vendor"]
 lang: en # Language code as defined in _data/i18n.yml. en, en-gb, en-us, zh, zh-cn, zh-tw etc.
 permalink: /blog/:year/:month/:day/:title/
+remote_theme: yizeng/jekyll-theme-simple-texture
 
 whitelist: [jekyll-feed, jekyll-redirect-from, jekyll-seo-tag, jekyll-sitemap]
 plugins:
@@ -51,7 +52,7 @@ home:
   section2: <h2>오직 내가 보기 편하기 위하여 작성하였다</h2>
   section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/ducku1031" title="View on GitHub"></a></div>
 blog:
-  cc_license: https://creativecommons.org/licenses/by-nc-nd/4.0/ # A link to CC License of your choice.
+  cc_license: http://creativecommons.org/licenses/by-nc-nd/4.0/ # A link to CC License of your choice.
   cc_license_image: /assets/images/theme/cc-by-sa.png # An image of your CC License. 
   footer_content: A gem-based responsive simple texture styled <a href="http://jekyllrb.com/">Jekyll</a> theme.
 
