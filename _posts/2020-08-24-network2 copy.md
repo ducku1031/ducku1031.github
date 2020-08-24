@@ -21,18 +21,37 @@ redirect_from:
 - **Application에서 생성된 Data**
 
 - **Device**
+
 > - End Device : 실제로 동작하면서 Data를 생성하거나 처리   
 >   (PC, Server, Smartphone, IoT 등..)
 > - Networking Device : End Device간의 상호간의 Data를 전달   
 >   (Switch, AP, Router, L4/L7 Firewall, VPC, 등 전송장비)
 
 - **Meida** : Data를 한쪽 Device에서 에서 다른 쪽 Device로 전달하는 역할
+
 > (Wired or Wireless)
 
 - **Protocol** : 공통의 규칙
+
 > TCP, UDP, HTTP, FTP 등.
 
+<br><br>
 
 # 2. Computer Networking 방식
 
-- Uni
+- Unicast, Muticast, Broadcast
+
+> Unicast : 1대1 통신
+> Muticast : 1대 N 통신
+> Broadcast : 1 대 ALL 통신
+
+- Simplex, Duplex
+>
+![그림1](https://user-images.githubusercontent.com/69279022/91070504-c8a26400-e671-11ea-9e6a-73d040f8538b.png)
+
+- Connection Oriented, Connectionless
+
+> 
+- LAN, WAN
+- Point to Point, Multi-Access (Direct)
+- Circuit Switching, Packet Switching (InDirect)
